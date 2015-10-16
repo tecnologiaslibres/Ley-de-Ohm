@@ -1,3 +1,5 @@
+# Escrito por Mauro Javier Silva , año 2015
+# Programa calculador de ley de ohm y potencia para circuitos de corriente continua.
 valor = 0
 while loop == 1:
 	valor = menu()
