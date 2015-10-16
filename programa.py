@@ -1,34 +1,3 @@
-# Calculo de Ley de Ohm
-def menu():
-	try:
-		print (" ")
-		print ("==================================+")
-		print (" ")
-		print "Para calcular voltaje presione 1"
-		print (" ")
-		print "Para calcular amperaje presione 2"
-		print (" ")
-		print "Para calcular resistencia presione 3"
-		print (" ")
-		print "Para salir presione 4"
-		print (" ")
-		print ("==================================+")
-		print (" ")
-		return input ("Ingrese la opcion: ")
-		print "hola"
-	except NameError:
-		print (" ")
-		print ("===================================+")
-		print "Tiene que ingresar un valor numerico"
-		print ("===================================+")
-		print (" ")
-	except SyntaxError:
-		print (" ")
-		print ("===================================+")
-		print "Por favor, ingrese un valor entre 1 y 3"
-		print ("===================================+")
-		print (" ")
-loop = 1
 valor = 0
 while loop == 1:
 	valor = menu()
@@ -38,7 +7,7 @@ while loop == 1:
 		print ("========================+")
 		print ("Ud. calculara el voltaje")
 		print ("========================+")
-		print (" ")
+		print (" ")	
 
 		while True:
 			try:
@@ -61,13 +30,20 @@ while loop == 1:
 				print "Tiene que ingresar un valor numerico"
 				print ("===================================+")
 				print (" ")
-# Formula
+#Formula
 		voltaje = resistencia * amperaje
 		print (" ")
 		print ("============+")
 		print (str(voltaje)+" volts")
 		print ("============+")
 		print (" ")
+		print ("============+")
+		Potencia = amperaje ** 2 * resistencia
+		print (" ")
+		print ("============+")
+		print (str(Potencia) + " watts")
+		print ("============+")
+		print (" ")	
 		raw_input('Presion una tecla para continuar...')
 
 # Calcular amperaje
@@ -98,12 +74,11 @@ while loop == 1:
 				print ("===================================+")
 				print (" ")
 
-# Formula
+#formula
 		def DeFamperaje():
 			while True:
 				try:
 					amperaje = voltaje / resistencia
-					print "valores"
 					return amperaje
 				except ZeroDivisionError:
 					print (" ")
@@ -114,9 +89,30 @@ while loop == 1:
 
 					break
 		amperaje = DeFamperaje()
+		print ("============+")
+		print (" ")
+		print (str(amperaje) + " ampers")
 		print (" ")
 		print ("============+")
-		print (str(amperaje) + " ampers")
+		
+		def DeFpotencia():
+			while True:
+				try:
+					amperaje = voltaje ** 2 / resistencia
+					return Potencia
+				except ZeroDivisionError:
+					print (" ")
+					print ("===========================================+")
+					print "Tiene que ingresar un valor distinto de cero"
+					print ("===========================================+")
+					print (" ")
+
+					break
+		Potencia = DeFpotencia()
+		print ("============+")
+		print (" ")
+		print (str(Potencia) + " watts")
+		print (" ")
 		print ("============+")
 		print (" ")
 		raw_input('Presion una tecla para continuar...')
@@ -150,7 +146,7 @@ while loop == 1:
 				print "Tiene que ingresar un valor numerico"
 				print ("===================================+")
 				print (" ")
-# Formula
+#formula
 		def DeFresistencia():
 			while True:
 				try:
@@ -168,6 +164,12 @@ while loop == 1:
 		print (" ")
 		print ("============+")
 		print (str(resistencia) + " omhs")
+		print ("============+")
+		print (" ")
+		Potencia = amperaje * voltaje
+		print (" ")
+		print ("============+")
+		print (str(Potencia) + " watts")
 		print ("============+")
 		print (" ")
 		raw_input('Presion una tecla para continuar...')
